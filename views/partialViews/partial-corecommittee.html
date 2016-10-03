@@ -1,0 +1,13 @@
+﻿<h3 class="text-center">{{vm.currentContact.name}}</h3>
+<div class="col-sm-8 col-md-8">
+
+    <p>Email: {{vm.currentContact.email}}</p>
+    <p>Phone: {{vm.currentContact.mobileNo}}</p>
+    <p>Building No : <b>{{vm.currentContact.buildingNo}}</b> , Flat No : <b>{{vm.currentContact.flatNo}}</b>
+
+    <p>Designation:</p>
+    <p class="well well-lg">{{vm.currentContact.notes}}</p>
+</div>
+<div class="col-sm-2 col-md-2">
+    <img ng-src={{vm.currentContact.imgProfile}} class="img-circle" alt="Cinque Terre" width="120" height="120">
+</div>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<!-- 
+  Visual Studio global web project settings.
+-->
+<VisualWebDeveloper>
+
+  <Globals>
+    
+  
+    
+  
+    <UserProperties CoreCommiteeData_1JSON__JSONSchema="http://json.schemastore.org/bower"/>
+  </Globals>
+</VisualWebDeveloper>

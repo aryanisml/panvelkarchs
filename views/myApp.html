@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Panvelkar CHS V 1.0.0.0</title>
+    <script src="../scripts/angular.min.js" type="text/javascript"></script>
+    <script src="../scripts/angular-ui-router.min.js" type="text/javascript"></script>
+    <script src="../app/app.js"></script>
+    <script src="../directive/membersDirective.js"></script>
+    <script src="../app/config.js"></script>
+    <script src="../factory/coreCommitteeFactory.js"></script>
+    <script src="../Controllers/contactController.js"></script>
+    <script src="../Controllers/homeController.js"></script>
+    <script src="../Controllers/corecommitteeController.js"></script>
+    <script src="../scripts/jquery.min.js"></script>
+    <script src="../scripts/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../style/bootstrap.min.css" />
+    <link rel="stylesheet" href="../style/contactStyle.css" />
+
+    <style>
+        .navbar {
+            border-radius: 0;
+        }
+        .footerdiv {
+                font-size: 12px;
+    background: #181818;
+    padding: 75px 0;
+    line-height: 1px;
+    color: rgba(255,255,255,.9);
+}
+        
+
+    </style>
+
+    <meta charset="utf-8" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="home" >Panvelkar Cop. Housing Society</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="contact">Contact us</a></li>
+            <li><a ui-sref="gallary">Gallary</a></li>
+            <li><a ui-sref="documents">Documents</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <marquee><b style="color:blue">Next meeting will schedule on Wednesday at 10.00 PM </b></marquee>
+        <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+        <div ui-view></div>
+
+    </div>
+
+    <!--<footer class="footerdiv ">
+
+    
+    
+    Hello World
+    </footer>-->
+
+</body>
+</html>
