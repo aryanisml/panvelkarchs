@@ -1,0 +1,20 @@
+﻿<div class="container">
+    <div class="row newrow panel panel-primary">
+        <div class="col-xs-5 panel-body">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h4>Links</h4>
+                    <div class="class=" list-group-item">
+                        <ul ng-repeat="linkItem in vm.link | orderBy: 'name' | filter: searchText">
+                            <a target="_blank" href={{linkItem.links}} filter searchText>{{linkItem.name}}</a>
+                        </ul>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>

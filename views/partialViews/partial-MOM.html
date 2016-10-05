@@ -1,0 +1,23 @@
+﻿<div class="container">
+    <div class="row newrow panel panel-primary">
+        <div class="col-xs-5 panel-body">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h4>Minutes of Meetings</h4>
+                    <!--<input class="form-control" placeholder="Seach MOM" type="text" ng-model="searchText">-->
+                    <div class="class=" list-group-item">
+                        <ul ng-repeat="momItem in vm.mom | orderBy: 'name' | filter: searchText">
+                            <a target="_blank" href={{momItem.links}} filter searchText>{{momItem.name}}</a>
+                        </ul>
+
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</div>

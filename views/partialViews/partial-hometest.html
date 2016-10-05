@@ -3,16 +3,16 @@
 
 
     <div class="container">
-        <div class="row newrow panel panel-primary">
+        <div class="row  panel panel-primary">
             <div class="panel-heading">
                 <h2 class="panel-title">Committee Members</h2>
             </div>
 
 
             <!--     contact list   	 -->
-            <div class="col-sm-5 panel-body">
+            <div class="col-sm-5 panel-body ">
                 <ul class="list-group">
-                    <li class="list-group-item">
+                    <li class="list-group-item panel-default">
                         <h4>Contacts:</h4>
                         <input class="form-control" placeholder="Seach Your Contacts" type="text" ng-model="searchText">
                         <members class="list-group-item" ng-repeat="contact in vm.contacts | orderBy: 'name' | filter: searchText "></members>

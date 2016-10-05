@@ -1,0 +1,31 @@
+﻿<!--banner start here-->
+<div class="container slider">
+    <img ng-repeat="slide in vm.slides" class="slide" ng-hide="!vm.isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+
+    <a class="arrow prev" href="#" ng-click="vm.nextSlide()"></a>
+    <a class="arrow next" href="#" ng-click="vm.prevSlide()"></a>
+    <nav class="nav">
+        <div class="wrapper">
+            <ul class="dots">
+                <li class="dot" ng-repeat="slide in vm.slides">
+                    <a href="#" ng-class="{'active':vm.isCurrentSlideIndex($index)}"
+                       ng-click="vm.setCurrentSlideIndex($index);">{{slide.description}}</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!--banner end here-->
+
+<!--<div id="slides_control">
+    <div>
+        <carousel interval="vm.myInterval">
+            <slide ng-repeat="slide in vm.slides" active="slide.active">
+                <img ng-src="{{slide.image}}">
+                <div class="carousel-caption">
+                    <h4>Slide {{$index+1}}</h4>
+                </div>
+            </slide>
+        </carousel>
+    </div>
+</div>-->

@@ -7,7 +7,7 @@
 
     funcStateRouting.$inject = ['$stateProvider', '$urlRouterProvider'];
     function funcStateRouting($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/homes');
         $stateProvider
        .state('contact', {
            url: '/contact',
@@ -32,9 +32,37 @@
         })
  .state('documents', {
             url: '/documents',
-            templateUrl: 'partialViews/partial-maintenance.html'
+            templateUrl: 'partialViews/partial-documents.html'
 
-        })
+ })
+  .state('documents.MOM', {
+                url: '/MOM',
+                templateUrl: 'partialViews/partial-MOM.html',
+      controller:"momController as vm"
+
+  })
+  .state('documents.Links', {
+      url: '/Links',
+      templateUrl: 'partialViews/partial-Links.html',
+      controller:"linkController as vm"
+
+            })
+
+.state('homepage', {
+    url: '/homes',
+    templateUrl: 'partialViews/partial-banner.html',
+    controller: 'bannerController as vm'
+
+}).state('test', {
+    url: '/test',
+    templateUrl: 'partialViews/partial-hometest.html',
+    controller: "homeController as vm"
+}).state('test.list', {
+    url: '/list',
+    params: { contactIndex: 0 },
+    templateUrl: 'partialViews/partial-corecommittee.html',
+    controller: "corecommiteeController as vm"
+})
 
     };
 
