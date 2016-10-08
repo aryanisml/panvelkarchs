@@ -29,18 +29,21 @@
     function funcbannerController($state) {
         var vm = this;
 
-        //vm.myInterval = 20;
+        
+        vm.myinterval = 3000;
 
         vm.slides = [
                     { image: '../img/heights5.jpg', description: 'Image 00' },
-                    { image: '../img/heights1.jpg', description: 'Image 01' },
+                    { image: '../img/heights3.jpg', description: 'Image 01' },
                     { image: '../img/heights2.jpg', description: 'Image 02' },
                     { image: '../img/heights4.jpg', description: 'Image 03' },
 
 
         ];
 
-        
+
+
+
 
         vm.currentIndex = 0;
         vm.setCurrentSlideIndex = function (index) {
