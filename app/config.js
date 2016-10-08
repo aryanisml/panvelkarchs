@@ -53,11 +53,11 @@
     templateUrl: 'partialViews/partial-banner.html',
     controller: 'bannerController as vm'
 
-}).state('test', {
-    url: '/test',
+}).state('members', {
+    url: '/members',
     templateUrl: 'partialViews/partial-hometest.html',
     controller: "homeController as vm"
-}).state('test.list', {
+}).state('members.list', {
     url: '/list',
     params: { contactIndex: 0 },
     templateUrl: 'partialViews/partial-corecommittee.html',

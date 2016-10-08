@@ -1,36 +1,36 @@
+<div class="tablewrapper " >
 
-<div class="global-wrapper">
+    <div class="tablecssNew col-sm-4">
 
-
-    <div class="container">
-        <div class="row  panel panel-primary">
-            <div class="panel-heading">
-                <h2 class="panel-title">Committee Members</h2>
-            </div>
-
-
-            <!--     contact list   	 -->
-            <div class="col-sm-5 panel-body ">
-                <ul class="list-group">
-                    <li class="list-group-item panel-default">
-                        <h4>Contacts:</h4>
-                        <input class="form-control" placeholder="Seach Your Contacts" type="text" ng-model="searchText">
-                        <members class="list-group-item" ng-repeat="contact in vm.contacts | orderBy: 'name' | filter: searchText "></members>
-
-                    </li>
-                </ul>
-            </div>
-
-            <!--   ng-view below       -->
-            <div class="col-sm-7">
-                <div class="list-group panel-body">
-                    <div ui-view></div>
-                </div>
+        <div class="rowcss headercss">
+            <div class="cellcss">
+                Committee Members
             </div>
 
         </div>
+        <div class="rowcss">
+            <div class="cellcss">
+                <input class="form-control" placeholder="Seach Your Contacts" type="text" ng-model="searchText">
+            </div>
+            <!--<input placeholder="Seach Your Contacts" type="text" ng-model="searchText">-->
+        </div>
+        <div ng-repeat="contact in vm.contacts | orderBy: 'name' | filter: searchText" class="rowcss">
+            <div class="cellcss">
+                <a ui-sref="members.list({
+    contactIndex:{{vm.contacts.indexOf(contact)}}
+  })">{{contact.name}}</a>
+
+
+            </div>
+
+
+
+        </div>
+
     </div>
-
-
-
+    <div class="col-sm-7">
+        <div class="list-group panel-body">
+            <div ui-view></div>
+        </div>
+    </div>
 </div>
